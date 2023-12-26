@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>수강과목 평균함수(객체 생성자 함수)</title>
+  <script>
+    function TestScore(name, kor, eng){
+      this.userName = name;
+      this.korNum = kor;
+      this.engNum = eng;
+
+      this.getTestInfo = function() {
+        var str = ""
+            str += "이름: " + this.userName + ", ";
+            str += "국어: " + this.korNum + ", ";
+            str += "영어: " + this.engNum + "<br>";
+        return str;
+      }
+
+      this.getAVG = function() {
+        return (this.korNum + this.engNum)/2;
+      }
+
+    }  
+    
+    var kimgun = new TestScore("김군", 80, 90);
+    var ohgun = new TestScore("오군", 100, 80);
+
+    document.write(kimgun.getTestInfo(),"<br>");
+    document.write("평균점수: " + kimgun.getAVG(),"<br>");    
+
+    document.write(ohgun.getTestInfo(),"<br>");
+    document.write("평균점수: " + ohgun.getAVG());
+
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

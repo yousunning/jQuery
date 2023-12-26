@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //변수: 데이터를 저장시 사용
+    //      var , const, let 키워드 사용으로 선언
+    //      문자형, 숫자형, 논리향 데이터를 보관
+    //      객체 참조 
+
+    //함수: 수행문(자바스크립트 코드) 보관시 사용
+    //      function 키워드 사용하여 선언
+    //      출력문, 제어문 등의 코드를 저장하고 데이터를 반환 return
+    
+    var count = 0; // 전역변수
+
+    myfnc(); // 호이스팅 방식 적용되어 실행 가능
+
+    function myfnc(){
+      count++;
+      document.write("hello"+count,"<br>");
+    }
+    
+    var thefnc = function(){
+      count++;
+      document.write("bye"+ count,"<br>");
+    }
+    // thefnc();
+    function num(){
+    var total = arguments[0]+arguments[1]+arguments[2]
+    return total;
+  }
+document.write(sum(10,20,30));
+  </script>
+  
+</body>
+</html>

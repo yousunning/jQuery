@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>재귀함수(반복문대신 본인을 계속 불러 올 수 있음)</title>
+  <script>
+    var num =0;
+    function testfnc(){
+      num++;
+      document.write(num,"<br>")
+      if(num ===10) return;
+
+      testfnc();
+    }
+    testfnc();
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

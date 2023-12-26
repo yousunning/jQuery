@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>즉시 실행함수</title>
+  <script>
+    //스코프(scope) : 변수 또는 함수의 유효범위
+    //지역변수란? 스코프 영역에서 선언한 변수 , 스코프 영역에서만 사용가능
+    //지역함수란? 스코프 영역에서 선언한 함수 , 스코프 영역에서만 호출가능
+ 
+    (function(){
+      var num = 100; //전역변수--> 지역변수
+        //지역 함수
+      function menu(){
+      num+=100;
+      alert(num);
+      } //지역함수 = 함수내에 함수
+
+menu();
+    }());
+ 
+(function(){
+  function menu(){
+    var num = 100;
+      alert(num);
+    }
+    }());
+
+
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

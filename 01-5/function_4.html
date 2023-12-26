@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로긴체크함수</title>
+  <script>
+    //--------------db조회
+    var rightId ="korea";
+    var rightPw ="1234";
+    //--------------------
+
+    function loginCheck(id, pw){
+      if(id===rightId){
+        if(pw === rightPw){
+         return (id+ "님 "+ "welcome~ :)");
+        }else{
+         return ("잘못된 비밀번호 입니다.")
+        }
+      }else{
+      return("존재하지 않는 아이디 입니다.")
+    }
+  }
+    var userId = prompt("아이디를 입력>" , " ");
+    var userPw = prompt("비밀번호를 입력>" , " ");
+
+    document.write(loginCheck(userId,userPw));
+
+    // loginCheck(userId,userPw);
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
