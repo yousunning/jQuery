@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>메서드와 grep메서드</title>
+  <script src="../js/jquery.js"></script>
+  <script>
+    $(function(){
+      var arr1 =[
+          {"area" : "서울" , "name" : "무대리"},
+          {"area" : "경기" , "name" : "홍과장"},
+          {"area" : "과천" , "name" : "박사장"},
+          {"area" : "서울" , "name" : "빅마마"}
+      ];
+      var arr2 = $.map(arr1, function(o,i){
+          if(o.area === "서울"){
+            return o;
+          }
+      })
+      console.log(arr2);
+   
+    
+    console.log("=====맵 메서드 엔드======")
+        //grep 메서드는 반환된 데이터가 참이면
+        //인덱스 오름차순으로 데이터를 새배열에 저장된
+        //배열 객체를 반환해준다.
+    var arr3 = $.grep(arr1, function(o,i){
+      if(o.area ==="과천"){
+        return true;
+      }else{
+        return false;
+      }
+    });
+    console.log(arr3);
+  })
+
+  </script>
+</head>
+<body>
+  <p>콘솔을 확인하세요!!!</p>
+</body>
+</html>
