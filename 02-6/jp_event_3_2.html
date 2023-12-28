@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>객체조작</title>
+  <script src ="../js/jquery.js"></script>
+  <script>
+    $(function(){
+      var srcVal = $ ("#sec_1 img").attr("src");
+      $("#sec_1 i img").attr({
+        "width" : 200,
+        "src" : srcVal.replace("1.jpg","3.jpg"),
+        "alt " : "보"
+      }).removeAttr("boder");
+    })
+  </script>
+</head>
+<body>
+  <h1></h1>
+  <section id="sec_1">
+    <h2></h2>
+    <p><img src="imges/math_img_1.jpg" alt="가위" boder="2"></p>
+  </section>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>효과와 애니메이션</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(function() {
+            $(".btn2").hide();
+
+            $(".btn1").on("click", function () {
+                $(".box").slideUp(2000, "linear", function () {
+                    $(".btn1").hide();
+                    $(".btn2").show();
+                });
+            });
+
+            $(".btn2").on("click", function () {
+                $(".box").fadeIn("swing", function () {
+                    $(".btn2").hide();
+                    $(".btn1").show();
+                });
+            });
+						$(".btn3").on("click", function(){
+							$(.box).slideToggle("swing",function(){
+								
+							})
+						})
+        });
+    </script>
+    <style>
+        .content {
+            width: 400px;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+	<p>
+		<button class="btn1">slideUp</button> 
+		<!-- 점점 접히며 숨겨짐 -->
+		<button class="btn2">fadeIn</button>
+		<!-- 점점 선명 -->
+	</p>
+	<p>
+		<button class="btn3">toggleSide</button>
+
+	</p> 
+	<p>
+		<!-- 지정한 투명도 적용 -->
+		<button class="btn4">fadeTo(0.3)</button>
+		<button class="btn5">fadeTo(1)</button>
+	</p>   
+	<div class="box">
+		<div class="content">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas feugiat consectetur nibh, ut luctus urna placerat non. Phasellus consectetur nunc nec mi feugiat egestas. Pellentesque et consectetur mauris, sed rutrum est. Etiam odio nunc, ornare quis urna sed, fermentum fermentum augue. Nam imperdiet vestibulum ipsum quis feugiat. Nunc non pellentesque diam, nec tempor nibh. Ut consequat sem sit amet ullamcorper sodales.
+		</div>
+	</div>
+</body>
+</html>
