@@ -10,7 +10,7 @@ $(function() {
   var $frm = $(".login_f");
   $frm.on("submit", function(e) {
     e.preventDefault();
-    var myData = $frm.serialize();
+    var myData = $frm.serialize();// serialize()
 
     $.ajax({
       type: "POST",
@@ -26,7 +26,7 @@ $(function() {
         }
       },
       error: function(){
-        //전송 실패시 코드ajax/jquery_ajax_6.html
+        //전송 실패시 코드
       }
     });
   });
